@@ -10,43 +10,188 @@ h1 {
     font-size: 28px;
 }
 
+h2 {
+    padding: 1em 0.25em;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 main.container {
     padding: 1em;
     min-height: 100vh;
 }
 
-main nav a {
-    display: inline-block;
-    margin: 0.75em 0.5em 0.75em 0;
-    text-decoration: none;
+header {
+    margin: -1.5em;
+    padding: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+small {
+    font-size: 0.9em;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+input[type='color'] {
+    min-height: 38px;
+}
+
+code {
+    display: block;
+    border-radius: 4px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.show {
+    display: block;
+}
+
+.input-group {
+    margin: 0.5em;
+}
+
+.input-group-container {
+    flex-basis: 320px;
+    flex-grow: 1;
+}
+
+.card {
+    flex-basis: 320px;
+    flex-grow: 1;
+}
+
+.card-img-top {
+    height: 3em;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+code,
+pre,
+pre code {
+    padding: 1em;
+}
+
+pre.prettyprint {
+    border: none !important;
+    padding: 1em !important;
 }
 
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #fff;
+        background-color: var(--bs-light) !important;
+        color: var(--bs-dark) !important;
     }
     main.container {
-        background-color: #fff;
+        background-color: var(--bs-light) !important;
         box-shadow: 0px 0px 75px rgba(0, 0, 0, 0.2);
     }
-    main nav {
-        border-bottom: solid 1px #ddd;
+    small {
+        color: #aaa;
     }
-    main nav a:hover {
-        color: #a78;
+    code,
+    pre {
+        background-color: var(--bs-light);
+    }
+    header {
+        background-color: #efefef;
+    }
+    .card-body {
+        background-color: #eee;
+        color: #333;
+    }
+    .tag {
+        color: rgb(66, 101, 205) !important;
+    }
+    .pln,
+    .kwd {
+        color: rgb(94, 174, 201) !important;
+    }
+    .kwd {
+        font-weight: bold;
+    }
+    .str {
+        color: rgb(172, 94, 201) !important;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        color: #ddd;
-        background-color: #000;
+        background-color: var(--bs-dark) !important;
+        color: var(--bs-light) !important;
     }
     main.container {
-        background-color: #000;
-        box-shadow: 0px 0px 75px rgba(255, 255, 255, 0.2);
+        background-color: var(--bs-dark) !important;
+        box-shadow: 0px 0px 75px rgba(0, 0, 0, 0.5);
     }
-    main nav {
-        border-bottom: solid 1px #333;
+    small {
+        color: #999;
+    }
+    code,
+    pre {
+        background-color: #333;
+        border-radius: 0 !important;
+    }
+    header {
+        background-color: #141414;
+    }
+    .card-img-top {
+        background-color: #151515;
+    }
+    .card-body {
+        background-color: #444;
+        color: #ccc;
+    }
+    .tag {
+        color: rgb(201, 164, 94) !important;
+    }
+    .pln,
+    .kwd {
+        color: rgb(94, 174, 201) !important;
+    }
+    .kwd {
+        font-weight: bold;
+    }
+    .str {
+        color: rgb(172, 94, 201) !important;
+    }
+    .atv {
+        color: rgb(111, 195, 133) !important;
+    }
+    .atn {
+        color: rgb(201, 94, 94) !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    body {
+        font-size: 0.9em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body {
+        font-size: 0.9em;
+    }
+    h1 {
+        font-size: 2.5em;
     }
 }
