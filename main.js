@@ -1,0 +1,1 @@
+const{main,h1,nav,a}=jdom.domFactory;main({className:"container",parent:document.body},h1({},"JDOM!"),nav({},a({href:"./builder/"},"builder")));
